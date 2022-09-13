@@ -9,10 +9,10 @@ bash ~/Desktop/Additional\ Tools/armitage/package.sh && su ubuntu && msfdb init 
 ```
 
 <h2>Scannen van de target</h2>
-Klik op Hosts > Nmap Scan > Intense Scan om een volledige nmap scan op de target uit te voeren.\n
+Klik op Hosts > Nmap Scan > Intense Scan om een volledige nmap scan op de target uit te voeren.
 ![](pic-1.png)
 
-Vul het IP in van de target. Dit kan een enkel IP-adres zijn of een range aan IP-adressen.\n
+Vul het IP in van de target. Dit kan een enkel IP-adres zijn of een range aan IP-adressen.
 ![](pic-2.png)
 
 Zodra de target is gescand verschijnt het in het venster rechtsboven. Rechtermuisklik op de target en klik op 'Services'. 
