@@ -1,4 +1,4 @@
-<h1>Het hacken van een onveilige postgres service</h1>
+<h1>Het hacken van een onveilige database</h1>
 Met deze demostructie wordt gedemonstreerd hoe een onveilige configuratie van de apparaten in je netwerk kunnen leiden tot een volledig gecompromitteerd netwerk. Hiermee kan een potentiele dreigingsactor binnen een paar stappen volledige toegang krijgen tot alle apparaten en data in je netwerk. Hackers/cybercriminelen scannen het hele internet af, dus iedereen zou hier de dupe van kunnen worden.
 
 <h2>Het voorbereiden van Armitage</h2>
