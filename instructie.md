@@ -9,64 +9,80 @@ bash ~/Desktop/Additional\ Tools/armitage/package.sh && su ubuntu && msfdb init 
 ```
 
 <h2>Scannen van de target</h2>
-Klik op Hosts > Nmap Scan > Intense Scan om een volledige nmap scan op de target uit te voeren.
+1. Klik op Hosts > Nmap Scan > Intense Scan om een volledige nmap scan op de target uit te voeren.
+
 ![](pic-1.png)
 
-Vul het IP in van de target. Dit kan een enkel IP-adres zijn of een range aan IP-adressen.
+
+2. Vul het IP in van de target. Dit kan een enkel IP-adres zijn of een range aan IP-adressen.
+
 ![](pic-2.png)
 
-Zodra de target is gescand verschijnt het in het venster rechtsboven. Rechtermuisklik op de target en klik op 'Services'. 
+
+3. Zodra de target is gescand verschijnt het in het venster rechtsboven. Rechtermuisklik op de target en klik op 'Services'. 
 
 ![](pic-3.png)
 
-In het onderste venster worden nu per host de open poorten met bijbehorende services weergegeven. 
+
+4. In het onderste venster worden nu per host de open poorten met bijbehorende services weergegeven. 
 
 ![](pic-4.png)
 
-Ga in het venster linksboven op zoek naar 'postgres' om op alleen postgres aanvalstechnieken te filteren.
+
+5. Ga in het venster linksboven op zoek naar 'postgres' om op alleen postgres aanvalstechnieken te filteren.
 
 ![](pic-5.png)
 
+
 <h2>Bruteforcen van de target</h2>
-Sleep de 'postgres_login' module naar de target en klik op 'Launch' in het pop-up venster.
+1. Sleep de 'postgres_login' module naar de target en klik op 'Launch' in het pop-up venster.
 
 ![](pic-6.png)
 
-Zie in het onderste venster dat er geldige credentials zijn gevonden, namelijk postgres:password. 
+
+2.Zie in het onderste venster dat er geldige credentials zijn gevonden, namelijk postgres:password. 
 
 ![](pic-7.png)
 
+
 <h2>Hashdump op de target</h2>
-Sleep de 'postgres_hashdump' module naar de target, vul in het pop-up venster de juiste credentials in, en klik op 'Launch'.
+1. Sleep de 'postgres_hashdump' module naar de target, vul in het pop-up venster de juiste credentials in, en klik op 'Launch'.
 
 ![](pic-9.png)
 
-Zie in het onderste venster dat er inderdaad gebruikersnamen met bijbehorende wachtwoord-hashes gevonden zijn. Deze hashes kunnen gebruikt worden in Pass-the-Hash aanvallen, of kunnen gekraakt worden om ze om te zetten naar plaintext wachtwoorden.
+
+2. Zie in het onderste venster dat er inderdaad gebruikersnamen met bijbehorende wachtwoord-hashes gevonden zijn. Deze hashes kunnen gebruikt worden in Pass-the-Hash aanvallen, of kunnen gekraakt worden om ze om te zetten naar plaintext wachtwoorden.
 
 ![](pic-17.png)
 
+
 <h2>Uitlezen van bestanden op de target</h2>
-Sleep de 'postgres_readfile' module naar de target, vul in het pop-up venster de juist credentials in, en klik op 'Launch'.
+1. Sleep de 'postgres_readfile' module naar de target, vul in het pop-up venster de juist credentials in, en klik op 'Launch'.
 
 ![](pic-10.png)
 
-Zie in het onderste venster dat je inderdaad de inhoud van de bestanden uit kunt lezen. 
+
+2. Zie in het onderste venster dat je inderdaad de inhoud van de bestanden uit kunt lezen. 
 
 ![](pic-11.png)
 
+
 <h2>Volledige toegang tot de target verkrijgen</h2>
-Sleep de 'postgres_copy_from_program_cmd_exec' module naar de target, vul in het pop-up venster de juiste credentials in, selecteer 'Use a reverse connection', en klik op 'Launch'.
+1. Sleep de 'postgres_copy_from_program_cmd_exec' module naar de target, vul in het pop-up venster de juiste credentials in, selecteer 'Use a reverse connection', en klik op 'Launch'.
 
 ![](pic-13.png)
 
-Zie in het onderste venster dat er een nieuwe command shell sessie is geopend. 
+
+2. Zie in het onderste venster dat er een nieuwe command shell sessie is geopend. 
 
 ![](pic-14.png)
 
-Rechtermuisklik op de target > Shell 1 > Interact.
+
+3. Rechtermuisklik op de target > Shell 1 > Interact.
 
 ![](pic-15.png)
 
-Zie in het onderste scherm dat je nu volledige command line toegang hebt tot de target.
+
+4. Zie in het onderste scherm dat je nu volledige command line toegang hebt tot de target.
 
 ![](pic-16.png)
