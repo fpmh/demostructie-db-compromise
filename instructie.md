@@ -40,7 +40,7 @@ bash ~/Desktop/Additional\ Tools/armitage/package.sh && su ubuntu && msfdb init 
 ![](pic-6.png)
 
 
-2.Zie in het onderste venster dat er geldige credentials zijn gevonden, namelijk postgres:password. 
+<p>Zie in het onderste venster dat er geldige credentials zijn gevonden, namelijk postgres:password</p>
 
 ![](pic-7.png)
 
