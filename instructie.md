@@ -3,26 +3,27 @@ Met deze demostructie wordt gedemonstreerd hoe een onveilige configuratie van de
 
 <h2>Het voorbereiden van Armitage</h2>
 Het runnen van package.sh, switchen naar non-root user, msfdb initialiseren (gebruik username msf en wachtwoord msf), switchen naar root user, armitage starten.
-```bash
+
+```
 bash ~/Desktop/Additional\ Tools/armitage/package.sh && su ubuntu && msfdb init && sudo su && ~/Desktop/Additional\ Tools/Armitage/release/unix/armitage 
 ```
 
 <h2>Scannen van de target</h2>
 Vul het IP in van de target. Dit kan een enkel IP-adres zijn of een range aan IP-adressen.
-[foto]
+![](pic-1.png)
 
 Zodra de target is gescand verschijnt het in het venster rechtsboven. Rechtermuisklik op de target en klik op 'Services'. In het onderste venster worden nu per host de open poorten met bijbehorende services weergegeven. 
-[foto]
+![](pic-2.png)
 
 Ga in het venster linksboven op zoek naar 'postgres' om op alleen postgres aanvalstechnieken te filteren.
-[foto]
+![](pic-3.png)
 
 <h2>Bruteforcen van de target</h2>
 Sleep de 'postgres_login' module naar de target en klik op 'Launch' in het pop-up venster.
-[foto]
+![](pic-4.png)
 
 Zie in het onderste venster dat er geldige credentials zijn gevonden, namelijk postgres:password. 
-[foto]
+![](pic-5.png)
 
 <h2>Hashdump op de target</h2>
 Sleep de 'postgres_hashdump' module naar de target, vul in het pop-up venster de juiste credentials in, en klik op 'Launch'.
